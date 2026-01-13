@@ -245,12 +245,6 @@ body {
     align-items: center;
 }
 
-@media (max-width: 768px) {
-    .why-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .why-content h2 {
     font-size: 2.2rem;
     color: #2c3e50;
@@ -315,17 +309,6 @@ body {
     position: relative;
 }
 
-@media (max-width: 768px) {
-    .process-steps {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .step-arrow {
-        transform: rotate(90deg);
-    }
-}
-
 .step {
     text-align: center;
     flex: 1;
@@ -384,12 +367,6 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     margin-top: 50px;
-}
-
-@media (max-width: 768px) {
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 .contact-item {
@@ -509,8 +486,74 @@ body {
     font-size: 0.9rem;
 }
 
+/* ==================== 产品画廊样式 ==================== */
+.gallery {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    border: 1px solid #eee;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.gallery-caption {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery-caption h4 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.gallery-caption p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
+    /* 头部和导航 */
+    .header-whatsapp {
+        padding: 5px 10px;
+        font-size: 12px;
+        right: 10px;
+    }
+    
+    .header-whatsapp i {
+        font-size: 14px;
+    }
+    
+    /* Hero区域 */
     .hero h2 {
         font-size: 2rem;
     }
@@ -526,10 +569,22 @@ body {
         justify-content: center;
     }
     
+    /* 为什么选择我们 */
     .why-grid {
         grid-template-columns: 1fr;
     }
     
+    /* 流程步骤 */
+    .process-steps {
+        flex-direction: column;
+        gap: 40px; /* 增加间距 */
+    }
+    
+    .step-arrow {
+        transform: rotate(90deg);
+    }
+    
+    /* 联系方式 */
     .contact-grid {
         grid-template-columns: 1fr;
     }
@@ -538,14 +593,31 @@ body {
         justify-content: center;
     }
     
-    .header-whatsapp {
-        padding: 5px 10px;
-        font-size: 12px;
-        right: 10px;
+    /* 能力网格 */
+    .capabilities-grid {
+        grid-template-columns: 1fr;
     }
     
-    .header-whatsapp i {
-        font-size: 14px;
+    /* 画廊 */
+    .gallery {
+        padding: 60px 0;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .gallery-img {
+        height: 220px;
+    }
+}
+
+/* 响应式：平板 */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
     }
 }
 
@@ -559,5 +631,37 @@ body {
     
     .header-whatsapp i {
         font-size: 12px;
+    }
+    
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .contact-cta {
+        padding: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary,
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
     }
 }
