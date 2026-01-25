@@ -487,16 +487,32 @@ body {
 }
 
 /* ==================== 产品画廊样式 ==================== */
+/* 修改现有的画廊样式 */
 .gallery {
     padding: 80px 0;
     background-color: #f8f9fa;
+    position: relative; /* 为粘性定位创建参照 */
 }
 
+/* 添加画廊标题容器样式 */
+.gallery-header {
+    position: sticky;    /* 关键属性：粘性定位 */
+    top: 80px;          /* 距离顶部的距离，可根据需要调整 */
+    z-index: 100;       /* 确保在最上层 */
+    background-color: #f8f9fa; /* 与背景色一致，避免透明 */
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* 修改画廊网格，使其可滚动 */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
-    margin-top: 50px;
+    margin-top: 0; /* 移除原有的上边距 */
+    max-height: 600px; /* 设置最大高度，可根据需要调整 */
+    overflow-y: auto;  /* 关键属性：垂直滚动 */
+    padding: 15px;     /* 添加内边距，让滚动条不贴边 */
 }
 
 .gallery-item {
@@ -540,6 +556,25 @@ body {
     margin: 0;
 }
 
+/* 自定义滚动条样式 */
+.gallery-grid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.gallery-grid::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.gallery-grid::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     /* 头部和导航 */
@@ -577,7 +612,7 @@ body {
     /* 流程步骤 */
     .process-steps {
         flex-direction: column;
-        gap: 40px; /* 增加间距 */
+        gap: 40px;
     }
     
     .step-arrow {
@@ -598,7 +633,7 @@ body {
         grid-template-columns: 1fr;
     }
     
-    /* 画廊 */
+    /* 画廊响应式 */
     .gallery {
         padding: 60px 0;
     }
@@ -606,6 +641,11 @@ body {
     .gallery-grid {
         grid-template-columns: 1fr;
         gap: 20px;
+        max-height: 500px; /* 移动端稍小的高度 */
+    }
+    
+    .gallery-header {
+        top: 60px; /* 移动端调整粘性位置 */
     }
     
     .gallery-img {
