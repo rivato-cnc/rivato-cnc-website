@@ -171,15 +171,16 @@ body {
 
 .features {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 20px;
-    margin: 40px 0;
+    gap: 14px;
+    margin: 36px 0 30px;
 }
 
 .feature {
     background: rgba(255, 255, 255, 0.1);
-    padding: 12px 20px;
+    padding: 11px 16px;
+    white-space: nowrap;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -783,4 +784,20 @@ body {
 /* ==================== 全局留白：body 顶部为固定 top-bar 预留空间 ==================== */
 body {
     padding-top: 56px;     /* 与 .top-bar 的 height: 56px 严格一致，彻底避免被 header 遮盖 */
+}
+
+
+/* Nav: single centred line on desktop, gentle hover */
+.nav-inner { font-size: 0.78rem !important; gap: 4px 14px !important; }
+.nav-inner a.nav-link {
+    transition: color .15s ease;
+}
+.nav-inner a.nav-link:hover {
+    color: #3498db !important;
+}
+@media (max-width: 1120px) {
+    .nav-inner {
+        font-size: 0.8rem !important;
+        gap: 6px 14px !important;
+    }
 }
