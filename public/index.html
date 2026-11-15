@@ -88,6 +88,11 @@
       ]
     }
     </script>
+<style>
+@media (min-width: 993px) {
+    .capabilities-grid { grid-template-columns: repeat(3, 1fr); }
+}
+</style>
 </head>
 <body style="padding-top: 56px;">
     <!-- 新增：顶部固定公司信息栏 -->
@@ -122,21 +127,21 @@
             </a>
         </div>
     </header>
-        <nav style="background:#ffffff; border-bottom:1px solid #e5e9ec;">
-        <div class="container" style="display:flex; flex-wrap:wrap; gap:18px; padding:14px 0; font-size:0.92rem;">
-            <a href="/" style="color:#2c3e50; text-decoration:none; font-weight:600;">Home</a>
-            <a href="cnc-machining" style="color:#2c3e50; text-decoration:none;">CNC Machining</a>
-            <a href="3d-printing" style="color:#2c3e50; text-decoration:none;">3D Printing</a>
-            <a href="sheet-metal-fabrication" style="color:#2c3e50; text-decoration:none;">Sheet Metal Fabrication</a>
-            <a href="vacuum-casting" style="color:#2c3e50; text-decoration:none;">Vacuum Casting</a>
-            <a href="injection-molding" style="color:#2c3e50; text-decoration:none;">Injection Molding</a>
-            <a href="surface-finishing" style="color:#2c3e50; text-decoration:none;">Surface Finishing</a>
-            <a href="one-stop" style="color:#2c3e50; text-decoration:none;">One-Stop Services</a>
-            <a href="gallery" style="color:#2c3e50; text-decoration:none;">Gallery</a>
-            <a href="industries" style="color:#2c3e50; text-decoration:none;">Industries</a>
-            <a href="quality" style="color:#2c3e50; text-decoration:none;">Quality</a>
-            <a href="logistics" style="color:#2c3e50; text-decoration:none;">Logistics</a>
-            <a href="quote-process" style="color:#2c3e50; text-decoration:none;">Get a Quote</a>
+            <nav style="background:#ffffff; border-bottom:1px solid #e5e9ec;">
+        <div class="container nav-inner" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:8px 20px; padding:13px 0; font-size:0.84rem; letter-spacing:0.01em;">
+            <a class="nav-link" href="/" style="color:#2c3e50; text-decoration:none;font-weight:600;">Home</a>
+            <a class="nav-link" href="cnc-machining" style="color:#2c3e50; text-decoration:none;">CNC Machining</a>
+            <a class="nav-link" href="3d-printing" style="color:#2c3e50; text-decoration:none;">3D Printing</a>
+            <a class="nav-link" href="sheet-metal-fabrication" style="color:#2c3e50; text-decoration:none;">Sheet Metal</a>
+            <a class="nav-link" href="vacuum-casting" style="color:#2c3e50; text-decoration:none;">Vacuum Casting</a>
+            <a class="nav-link" href="injection-molding" style="color:#2c3e50; text-decoration:none;">Injection Molding</a>
+            <a class="nav-link" href="surface-finishing" style="color:#2c3e50; text-decoration:none;">Surface Finishing</a>
+            <a class="nav-link" href="one-stop" style="color:#2c3e50; text-decoration:none;">One-Stop</a>
+            <a class="nav-link" href="gallery" style="color:#2c3e50; text-decoration:none;">Gallery</a>
+            <a class="nav-link" href="industries" style="color:#2c3e50; text-decoration:none;">Industries</a>
+            <a class="nav-link" href="quality" style="color:#2c3e50; text-decoration:none;">Quality</a>
+            <a class="nav-link" href="logistics" style="color:#2c3e50; text-decoration:none;">Logistics</a>
+            <a class="nav-link" href="quote-process" style="color:#2c3e50; text-decoration:none;">Get a Quote</a>
         </div>
     </nav>
     <!-- 主图区域 -->
@@ -172,7 +177,7 @@
                     <i class="fab fa-whatsapp"></i> Contact via WhatsApp
                 </a>
                 
-                <a href="/cdn-cgi/l/email-protection#5d3a3c2f2f3829291d2f342b3c29323e333e733e3230622e283f37383e29600f1b0c786f6d70786f6d2d3c2f29786f6d392f3c2a34333a" class="whatsapp-btn" style="background:#2d6da3; margin-left:12px;">
+                <a href="mailto:garrett@rivatocnc.com" class="whatsapp-btn" style="background:#2d6da3; margin-left:12px;">
                     <i class="fas fa-envelope"></i> Send your drawing
                 </a>
                                 <p class="response-time"><i class="fas fa-clock"></i> Reply within 4–8 working hours (Mon–Fri)</p>
@@ -182,7 +187,7 @@
 
     <section style="background:#1a252f; color:#ffffff; padding:18px 0;">
         <div class="container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:12px; text-align:center; font-size:0.92rem;">
-            <div><i class="fas fa-ruler-combined" style="color:#2ecc71;"></i> Down to ±0.005 mm on specified features</div>
+            <div><i class="fas fa-ruler-combined" style="color:#2ecc71;"></i> ±0.005 mm on specified features</div>
             <div><i class="fas fa-layer-group" style="color:#2ecc71;"></i> 6 processes, one point of contact</div>
             <div><i class="fas fa-file-circle-check" style="color:#2ecc71;"></i> DFM feedback before the price</div>
             <div><i class="fas fa-clock" style="color:#2ecc71;"></i> Quote in 4–8 working hours</div>
@@ -268,7 +273,7 @@
                         </div>
                         <div class="reason-text">
                             <h4>Experienced Engineering Team</h4>
-                            <p>Founded in January 2026, our engineers bring 10+ years of hands-on CNC machining experience</p>
+                            <p>Our engineering team brings 10+ years of hands-on CNC machining and tooling experience to every project</p>
                         </div>
                     </div>
                     
@@ -405,7 +410,7 @@
         <div class="container">
             <h2 style="font-size:1.6rem; margin-bottom:10px;">Send a drawing, get a price</h2>
             <p style="opacity:0.9; margin-bottom:24px;">STEP, IGES, DWG or PDF — with material, quantity, tolerance and finish. Confidential, no minimum order.</p>
-            <a href="/cdn-cgi/l/email-protection#0b6c6a79796e7f7f4b79627d6a7f646865682568646634787e69616e687f36594d5a2e393b262e393b7b6a797f2e393b6f796a7c62656c" style="display:inline-block; background:#2ecc71; color:#fff; padding:14px 30px; border-radius:40px; text-decoration:none; font-weight:600; margin:0 6px 10px;"><i class="fas fa-envelope"></i> Email the drawing</a>
+            <a href="mailto:garrett@rivatocnc.com" style="display:inline-block; background:#2ecc71; color:#fff; padding:14px 30px; border-radius:40px; text-decoration:none; font-weight:600; margin:0 6px 10px;"><i class="fas fa-envelope"></i> Email the drawing</a>
             <a href="https://wa.me/8613798588248?text=Hello%20Rivato%20CNC,%20I%20would%20like%20a%20quote" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:rgba(255,255,255,0.14); border:1px solid rgba(255,255,255,0.5); color:#fff; padding:14px 30px; border-radius:40px; text-decoration:none; font-weight:600; margin:0 6px 10px;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </section>
@@ -558,7 +563,7 @@
             
             <p style="text-align:center; color:#7f8c8d; font-size:0.9rem; margin-top:30px;">
                 Looking for a CNC machine? Tell us your budget and target parts — we recommend the right equipment:
-                <a href="/cdn-cgi/l/email-protection#5b3c3a29293e2f2f1b29322d3a2f343835387538343664282e39313e382f661815187e696b163a383332353e7e696b12352a2e322922" style="color:#3498db;"><span class="__cf_email__" data-cfemail="cea9afbcbcabbaba8ebca7b8afbaa1ada0ade0ada1a3">[email&#160;protected]</span></a>
+                <a href="mailto:garrett@rivatocnc.com" style="color:#3498db;"><span>garrett@rivatocnc.com</span></a>
             </p>
         </div>
     </section>
@@ -604,7 +609,7 @@
                         </div>
                         <div class="contact-details">
                             <h3>Email</h3>
-                            <a href="/cdn-cgi/l/email-protection#c0a7a1b2b2a5b4b480b2a9b6a1b4afa3aea3eea3afad"><span class="__cf_email__" data-cfemail="96f1f7e4e4f3e2e2d6e4ffe0f7e2f9f5f8f5b8f5f9fb">[email&#160;protected]</span></a>
+                            <a href="mailto:garrett@rivatocnc.com"><span>garrett@rivatocnc.com</span></a>
                         </div>
                     </div>
                     
@@ -664,7 +669,7 @@
                     <p>Send us your drawings for evaluation and quotation</p>
                     
                     <div class="cta-buttons">
-                        <a href="/cdn-cgi/l/email-protection#f99e988b8b9c8d8db98b908f988d969a979ad79a9694c68a8c9b939c9a8dc4bab7badccbc9b4989a91909790979edccbc9b097888c908b80" class="btn-primary">
+                        <a href="mailto:garrett@rivatocnc.com" class="btn-primary">
                             <i class="fas fa-paper-plane"></i> Send Email
                         </a>
                         <a href="https://wa.me/8613798588248?text=Hello%20Rivato%20CNC,%20I%20have%20a%20project%20inquiry" 
@@ -711,7 +716,6 @@
                     <div style="margin-top:22px; padding-top:18px; border-top:1px solid #2c3e50; text-align:left; font-size:0.82rem; line-height:1.9; color:#95a5a6;">
                         <p><strong style="color:#bdc3c7;">Registered Company:</strong> Shenzhen Rivato Precision Machinery Technology Co., Ltd.（深圳市瑞瓦托精密机械科技有限公司）· Trading as Rivato CNC</p>
                         <p><strong style="color:#bdc3c7;">Unified Social Credit Code:</strong> 91440300MAK6W4370L</p>
-                        <p><strong style="color:#bdc3c7;">Founded:</strong> January 2026</p>
                         <p><strong style="color:#bdc3c7;">Registered Address:</strong> Room 303-2, No. 11 Nandong New Village, Huangpu Community, Xinqiao Subdistrict, Bao'an District, Shenzhen, Guangdong Province, P.R. China</p>
                         <p><strong style="color:#bdc3c7;">Customs Registration:</strong> Import &amp; Export Goods Consignee/Consignor (Fuzhong Customs) — verifiable at credit.customs.gov.cn</p>
                         <div style="display:flex; gap:16px; margin-top:14px; flex-wrap:wrap; justify-content:center;">
@@ -729,6 +733,6 @@
             </div>
         </div>
     </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"8540614c4d524f2cbc460d18b1746c0f","r":1,"spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"8540614c4d524f2cbc460d18b1746c0f","r":1,"spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
